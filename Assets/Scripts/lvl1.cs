@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
+using System.Linq;
 
 public class lvl1 : MonoBehaviour
 {
@@ -13,7 +15,18 @@ public class lvl1 : MonoBehaviour
     bool activePer2 = true; //bandera para saber si esta activo el personaje2
     bool activePer3 = true; //bandera para saber si esta activo el personaje3
     bool activePer4 = true; //bandera para saber si esta activo el personaje4
-    
+
+    bool agregarlist = true;
+    bool reproducir_secuencia = true;
+    bool limpiar = false;
+
+    int rand = 0;
+    int contador = 0;
+
+    List<int> reproducir = new List<int>();
+    List<int> aux = new List<int>();
+    List<int> jugador = new List<int>();
+
 
     void Start()
     {
@@ -70,20 +83,62 @@ public class lvl1 : MonoBehaviour
 
         }
 
+        if(agregarlist)
+            agregar(); // agregamos un numero random a la lista 
+
+
+        if(activePer1 && activePer2 && activePer3 && activePer4 && reproducir_secuencia) // si todos los botones estan encendidos podemos proceder a reproducir la lista
+        {
+            if(timer >= 2) // este timer es para que si salen repetidas de tiempo de que aparezcan y desaparezcan 
+            {
+                foreach (int i in reproducir) // cada elemento de reproducir se guarda en i
+                {
+                    Reproducir(i);
+                    break;
+                }
+                contador = 0;
+            }
+            
+        }
+
+  
+
+        
+
+
+
+
 
     }
 
 
     public void Personaje1()
     {
-        if( activePer2 && activePer3 && activePer4)
+        if( activePer2 && activePer3 && activePer4 && !reproducir_secuencia)
         {
             GameObject.Find("Personaje1").GetComponent<Image>().enabled = false;//desactiva la imagen del boton
             GameObject.Find("Personaje1").GetComponent<Button>().enabled = false;// desactiva el boton
             timer = 0;
             activePer1 = false;
             tiempoclick = 0; // se iguala a 0 para que no se acumule el tiempo que le da click mientras juega 
+            jugador.Add(1);
             Debug.Log("Click en rojo");
+
+            if (reproducir.ElementAt(jugador.Count-1)!=1){ //con esto entramos al elemento de reproducir que en teoria debe de ser 1 
+                //el -1 es por que el count te regresa cuantos elementos tiene y como minimo es 1
+                Debug.Log("Malll");
+
+            }
+
+            if (jugador.Count == reproducir.Count) // si las listas son iguales se reproduce la secuencia, se limpia la lista del jugador y se añade una nueva
+            {
+                reproducir_secuencia = true;
+                jugador.Clear();
+                agregarlist = true;
+
+            }
+
+
         }
         
         
@@ -92,14 +147,30 @@ public class lvl1 : MonoBehaviour
 
     public void Personaje2()
     {
-        if (activePer1 && activePer3 && activePer4) //if para que no pueda presionar mas de un boton al mismo tiempo 
+        if (activePer1 && activePer3 && activePer4 && !reproducir_secuencia) //if para que no pueda presionar mas de un boton al mismo tiempo 
         {
             GameObject.Find("Personaje2").GetComponent<Image>().enabled = false;//desactiva la imagen del boton
             GameObject.Find("Personaje2").GetComponent<Button>().enabled = false; // desactiva el boton
             timer = 0;
             activePer2 = false;
             tiempoclick = 0;
+            jugador.Add(2);
             Debug.Log("Click en verder");
+
+            if (reproducir.ElementAt(jugador.Count - 1) != 2)
+            { //con esto entramos al elemento de reproducir que en teoria debe de ser 1 
+                //el -1 es por que el count te regresa cuantos elementos tiene y como minimo es 1
+                Debug.Log("Malll");
+
+            }
+
+            if (jugador.Count == reproducir.Count)
+            {
+                reproducir_secuencia = true;
+                jugador.Clear();
+                agregarlist = true;
+
+            }
         }
 
             
@@ -107,14 +178,30 @@ public class lvl1 : MonoBehaviour
 
     public void Personaje3()
     {
-        if (activePer2 && activePer1 && activePer4)//if para que no pueda presionar mas de un boton al mismo tiempo 
+        if (activePer2 && activePer1 && activePer4 && !reproducir_secuencia)//if para que no pueda presionar mas de un boton al mismo tiempo 
         {
             GameObject.Find("Personaje3").GetComponent<Image>().enabled = false; //desactiva la imagen del boton
             GameObject.Find("Personaje3").GetComponent<Button>().enabled = false;// desactiva el boton
             timer = 0;
             activePer3 = false;
             tiempoclick = 0;
+            jugador.Add(3);
             Debug.Log("Click en rosa");
+
+            if (reproducir.ElementAt(jugador.Count - 1) != 3)
+            { //con esto entramos al elemento de reproducir que en teoria debe de ser 1 
+                //el -1 es por que el count te regresa cuantos elementos tiene y como minimo es 1
+                Debug.Log("Malll");
+
+            }
+
+            if (jugador.Count == reproducir.Count)
+            {
+                reproducir_secuencia = true;
+                jugador.Clear();
+                agregarlist = true;
+
+            }
         }
 
            
@@ -122,17 +209,95 @@ public class lvl1 : MonoBehaviour
 
     public void Personaje4()//if para que no pueda presionar mas de un boton al mismo tiempo 
     {
-        if (activePer2 && activePer3 && activePer1)
+        if (activePer2 && activePer3 && activePer1 && !reproducir_secuencia)
         {
             GameObject.Find("Personaje4").GetComponent<Image>().enabled = false;//desactiva la imagen del boton
             GameObject.Find("Personaje4").GetComponent<Button>().enabled = false;// desactiva el boton
             timer = 0;
             activePer4 = false;
             tiempoclick = 0;
+            jugador.Add(4);
             Debug.Log("Click en azul");
+
+            if (reproducir.ElementAt(jugador.Count - 1) != 4)
+            { //con esto entramos al elemento de reproducir que en teoria debe de ser 1 
+                //el -1 es por que el count te regresa cuantos elementos tiene y como minimo es 1
+                Debug.Log("Malll");
+
+            }
+
+            if (jugador.Count == reproducir.Count)
+            {
+                reproducir_secuencia = true;
+                jugador.Clear();
+                agregarlist = true;
+
+            }
+        }
+  
+    }
+
+
+    public void agregar()
+    {
+        Debug.Log("agregar");
+        rand = UnityEngine.Random.Range(1, 5); 
+        reproducir.Add(rand);
+        agregarlist = false;
+        
+        //reproducir_secuencia = false;
+    }
+
+    public void Reproducir(int n)
+    {
+        // reproducir_secuencia = false;
+        Debug.Log("reproducir");
+
+        if (n == 1)
+        {
+            GameObject.Find("Personaje1").GetComponent<Image>().enabled = false;//desactiva la imagen del boton
+            GameObject.Find("Personaje1").GetComponent<Button>().enabled = false;// desactiva el boton
+            timer = 0;
+            activePer1 = false;
         }
 
-            
+        if (n == 2)
+        {
+            GameObject.Find("Personaje2").GetComponent<Image>().enabled = false;//desactiva la imagen del boton
+            GameObject.Find("Personaje2").GetComponent<Button>().enabled = false;// desactiva el boton
+            timer = 0;
+            activePer2 = false;
+        }
+
+        if (n == 3)
+        {
+            GameObject.Find("Personaje3").GetComponent<Image>().enabled = false;//desactiva la imagen del boton
+            GameObject.Find("Personaje3").GetComponent<Button>().enabled = false;// desactiva el boton
+            timer = 0;
+            activePer3 = false;
+        }
+
+        if (n == 4)
+        {
+            GameObject.Find("Personaje4").GetComponent<Image>().enabled = false;//desactiva la imagen del boton
+            GameObject.Find("Personaje4").GetComponent<Button>().enabled = false;// desactiva el boton
+            timer = 0;
+            activePer4 = false;
+        }
+
+        aux.Add(reproducir.ElementAt(0)); // pasamos los datos a un auxiliar 
+        reproducir.RemoveAt(0); // le quitamos el primer elemento;
+
+        if(reproducir.Count == 0) // si la lista esta vacia ya no reproducimos la secuencia;
+        {
+             reproducir_secuencia = false;
+                foreach (int i in aux) // cuando termina de reproducir vuelve a llenar la lista principal y vacia el aux
+                {
+                    reproducir.Add(i);
+                }
+                aux.Clear();
+        }
+
     }
 
 }
