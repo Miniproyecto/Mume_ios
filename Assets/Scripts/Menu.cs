@@ -53,10 +53,41 @@ public class Menu : MonoBehaviour
 
         }
 
-        if (tiempoclick > 2)
+        if (tiempoclick > 3) // si dejo oprimido tres segundo o mas se sale el juego 
         {
-            SceneManager.LoadScene("Niveles");
+            Application.Quit();
         }
 
     }
+
+
+
+    public void clickJugar()
+    {
+        SceneManager.LoadScene("Niveles");
+
+    }
+
+    public void clickInstrucciones()
+    {
+        SceneManager.LoadScene("Instrucciones");
+
+    }
+
+    public void clickPrueba()
+    {
+        SceneManager.LoadScene("Instrucciones");
+    }
+
+    public void clickProposito()
+    {
+        SceneManager.LoadScene("Proposito");
+
+    }
+
+    public void clickSalir()
+    {
+        Application.Quit();
+    }
+
 }

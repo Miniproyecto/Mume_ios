@@ -45,5 +45,28 @@ public class Niveles : MonoBehaviour
             SceneManager.LoadScene("SampleScene");
         }
 
+        if (timer >= 4 && clicks == 2)
+        {
+            SceneManager.LoadScene("lvl2");
+        }
+
     }
+
+    public void clickFacil()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
+
+    public void clickNormal()
+    {
+        SceneManager.LoadScene("lvl2");
+    }
+
+    public void clickRegresar()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+
 }

@@ -359,7 +359,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 892968652}
         m_MethodName: clickPrueba
         m_Mode: 1
         m_Arguments:
@@ -726,7 +726,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 892968652}
         m_MethodName: clickSalir
         m_Mode: 1
         m_Arguments:
@@ -979,7 +979,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 892968652}
         m_MethodName: clickProposito
         m_Mode: 1
         m_Arguments:
@@ -1189,8 +1189,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: iniciar
+      - m_Target: {fileID: 892968652}
+        m_MethodName: clickJugar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1319,8 +1319,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: clickinstrucciones
+      - m_Target: {fileID: 892968652}
+        m_MethodName: clickInstrucciones
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
