@@ -28,6 +28,12 @@ public class lvl1 : MonoBehaviour
     List<int> jugador = new List<int>();
 
 
+    public AudioClip sonido_z = null;
+    public AudioClip sonido_x = null;
+    public AudioClip sonido_a = null;
+    public AudioClip sonido_s = null;
+
+
     void Start()
     {
 
@@ -123,6 +129,7 @@ public class lvl1 : MonoBehaviour
             tiempoclick = 0; // se iguala a 0 para que no se acumule el tiempo que le da click mientras juega 
             jugador.Add(1);
             Debug.Log("Click en rojo");
+            AudioSource.PlayClipAtPoint(sonido_z, new Vector3(0, 0, 0), 1);
 
             if (reproducir.ElementAt(jugador.Count-1)!=1){ //con esto entramos al elemento de reproducir que en teoria debe de ser 1 
                 //el -1 es por que el count te regresa cuantos elementos tiene y como minimo es 1
@@ -156,6 +163,8 @@ public class lvl1 : MonoBehaviour
             tiempoclick = 0;
             jugador.Add(2);
             Debug.Log("Click en verder");
+            AudioSource.PlayClipAtPoint(sonido_x, new Vector3(0, 0, 0), 1);
+
 
             if (reproducir.ElementAt(jugador.Count - 1) != 2)
             { //con esto entramos al elemento de reproducir que en teoria debe de ser 1 
@@ -187,6 +196,8 @@ public class lvl1 : MonoBehaviour
             tiempoclick = 0;
             jugador.Add(3);
             Debug.Log("Click en rosa");
+            AudioSource.PlayClipAtPoint(sonido_a, new Vector3(0, 0, 0), 1);
+
 
             if (reproducir.ElementAt(jugador.Count - 1) != 3)
             { //con esto entramos al elemento de reproducir que en teoria debe de ser 1 
@@ -218,6 +229,8 @@ public class lvl1 : MonoBehaviour
             tiempoclick = 0;
             jugador.Add(4);
             Debug.Log("Click en azul");
+            AudioSource.PlayClipAtPoint(sonido_s, new Vector3(0, 0, 0), 1);
+
 
             if (reproducir.ElementAt(jugador.Count - 1) != 4)
             { //con esto entramos al elemento de reproducir que en teoria debe de ser 1 
@@ -259,6 +272,8 @@ public class lvl1 : MonoBehaviour
             GameObject.Find("Personaje1").GetComponent<Button>().enabled = false;// desactiva el boton
             timer = 0;
             activePer1 = false;
+            AudioSource.PlayClipAtPoint(sonido_z, new Vector3(0, 0, 0), 1);
+
         }
 
         if (n == 2)
@@ -267,6 +282,8 @@ public class lvl1 : MonoBehaviour
             GameObject.Find("Personaje2").GetComponent<Button>().enabled = false;// desactiva el boton
             timer = 0;
             activePer2 = false;
+            AudioSource.PlayClipAtPoint(sonido_x, new Vector3(0, 0, 0), 1);
+
         }
 
         if (n == 3)
@@ -275,6 +292,8 @@ public class lvl1 : MonoBehaviour
             GameObject.Find("Personaje3").GetComponent<Button>().enabled = false;// desactiva el boton
             timer = 0;
             activePer3 = false;
+            AudioSource.PlayClipAtPoint(sonido_a, new Vector3(0, 0, 0), 1);
+
         }
 
         if (n == 4)
@@ -283,6 +302,8 @@ public class lvl1 : MonoBehaviour
             GameObject.Find("Personaje4").GetComponent<Button>().enabled = false;// desactiva el boton
             timer = 0;
             activePer4 = false;
+            AudioSource.PlayClipAtPoint(sonido_s, new Vector3(0, 0, 0), 1);
+
         }
 
         aux.Add(reproducir.ElementAt(0)); // pasamos los datos a un auxiliar 
