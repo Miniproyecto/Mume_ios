@@ -1007,6 +1007,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f66fe20f36c3943998ecb8f36ede94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sonido_z: {fileID: 8300000, guid: 029adb8f23b52e4488f5c2ecb8a8b5fc, type: 3}
+  sonido_x: {fileID: 8300000, guid: 3d918ad4d77690549aa5ae6a13d72457, type: 3}
+  sonido_a: {fileID: 8300000, guid: c0f440e3a5a514b09ae0885734da196c, type: 3}
+  sonido_s: {fileID: 8300000, guid: dad52da17e7264fec82966d784bacfe5, type: 3}
+  escucha: {fileID: 8300000, guid: eaaec091dd90bbc40b89004a691b1f57, type: 3}
+  tuturno: {fileID: 8300000, guid: d798f22f1668d2c48b4d36d419a006d2, type: 3}
 --- !u!4 &1450791436
 Transform:
   m_ObjectHideFlags: 0
