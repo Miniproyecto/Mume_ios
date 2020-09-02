@@ -50,6 +50,16 @@ public class Niveles : MonoBehaviour
             SceneManager.LoadScene("lvl2");
         }
 
+        if (timer >= 4 && clicks == 3)
+        {
+            SceneManager.LoadScene("lvl3");
+        }
+
+        if(clicks >= 4)
+        {
+            clicks = 0;
+        }
+
     }
 
     public void clickFacil()
@@ -66,6 +76,11 @@ public class Niveles : MonoBehaviour
     public void clickRegresar()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void clickDificil()
+    {
+        SceneManager.LoadScene("lvl3");
     }
 
 
