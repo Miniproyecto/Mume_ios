@@ -9,6 +9,8 @@ public class Menu : MonoBehaviour
     int clicks = 0;
     float timer;
     float tiempoclick = 0;
+    public AudioClip menu = null;
+    bool reproducir = true;
     void Start()
     {
         
@@ -18,7 +20,19 @@ public class Menu : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        
+
+        if (reproducir)
+        {
+            AudioSource.PlayClipAtPoint(menu, new Vector3(0, 0, 0), 1);
+            reproducir = false;
+        }
+
+        if (timer >= 21)
+        {
+            reproducir = true;
+            timer = 0;
+        }
+
 
         if (timer >= 5 && clicks ==1 )
         {
@@ -37,6 +51,11 @@ public class Menu : MonoBehaviour
         if(timer >= 5 && clicks == 4)
         {
             SceneManager.LoadScene("Proposito");
+        }
+
+        if (timer >= 5 && clicks == 5)
+        {
+            Application.Quit();
         }
 
         if (Input.GetMouseButtonDown(0)) // este detecta solo una vez cuando se presiona

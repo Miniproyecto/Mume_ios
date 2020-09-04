@@ -726,10 +726,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1844707160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bde7d88f8ff52a24788b5d6093b1252f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d2748d9eee83c84392afbf6fdb0929f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proposito2: {fileID: 8300000, guid: e76ba2fd95440477e8312abc0168731a, type: 3}
+  proposito: {fileID: 8300000, guid: 0bce9f96de61c457bbb6c9c97a2eb001, type: 3}
 --- !u!4 &1844707162
 Transform:
   m_ObjectHideFlags: 0
@@ -827,7 +827,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1844707161}
-        m_MethodName: clickRegresar
+        m_MethodName: RegresarBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
