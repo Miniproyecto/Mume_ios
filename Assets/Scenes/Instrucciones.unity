@@ -305,7 +305,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 20, y: 130}
-  m_SizeDelta: {x: 600, y: 600}
+  m_SizeDelta: {x: 600, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &701282564
 MonoBehaviour:
@@ -341,7 +341,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Se dictara una tecla y se tocara una nota musical en el juego, tendr\xE1s
     que repetirla, y se a\xF1adir\xE1 otra nota musical aleatoria, repetir\xE1s la
-    nota anterior y la nueva, y ser\xE1 as\xED consecutivamente, hasta que te equivoques."
+    nota anterior y la nueva, y ser\xE1 as\xED consecutivamente, hasta que te equivoques.\n\nPuedes
+    regresar al menu principal desde cualquier parte dejando presionado tres segundos
+    en cualquier parte de la pantalla."
 --- !u!222 &701282565
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -564,7 +566,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: 530}
+  m_AnchoredPosition: {x: 30, y: 550}
   m_SizeDelta: {x: 240, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760193390
