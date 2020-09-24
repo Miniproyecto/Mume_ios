@@ -934,6 +934,7 @@ MonoBehaviour:
   sonido_d: {fileID: 8300000, guid: b09038897fb5ecf468b300fb5bc203a3, type: 3}
   escucha: {fileID: 8300000, guid: eaaec091dd90bbc40b89004a691b1f57, type: 3}
   tuturno: {fileID: 8300000, guid: d798f22f1668d2c48b4d36d419a006d2, type: 3}
+  nivel2: {fileID: 8300000, guid: 42acc7871fc8a4bb7a0908f2df5a3b55, type: 3}
 --- !u!4 &1450791436
 Transform:
   m_ObjectHideFlags: 0

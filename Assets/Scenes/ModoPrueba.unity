@@ -928,6 +928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b3192acdac6284bb69cb894054bb05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  modoprueba: {fileID: 8300000, guid: b32f3f9c2107643bcb789428b23d2cb5, type: 3}
   sonido_z: {fileID: 8300000, guid: 029adb8f23b52e4488f5c2ecb8a8b5fc, type: 3}
   sonido_x: {fileID: 8300000, guid: 3d918ad4d77690549aa5ae6a13d72457, type: 3}
   sonido_a: {fileID: 8300000, guid: c0f440e3a5a514b09ae0885734da196c, type: 3}

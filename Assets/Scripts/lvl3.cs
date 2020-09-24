@@ -46,7 +46,7 @@ public class lvl3 : MonoBehaviour
     public AudioClip tuturno = null;
 
 
-
+    
 
 
     void Start()
@@ -58,7 +58,8 @@ public class lvl3 : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(activePer1 == false && timer >= 1  ) // si no esta activado y paso 1 seg activa el boton y su imagen
+        
+        if (activePer1 == false && timer >= 1  ) // si no esta activado y paso 1 seg activa el boton y su imagen
         {
             activePer1 = true;
             GameObject.Find("Personaje1").GetComponent<Image>().enabled = true;

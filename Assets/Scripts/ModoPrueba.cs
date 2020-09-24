@@ -20,6 +20,9 @@ public class ModoPrueba : MonoBehaviour
     bool activePer6 = true; //bandera para saber si esta activo el personaje4
 
 
+    public AudioClip modoprueba = null;
+    bool reproducirmodoprueba = true;
+
 
     bool limpiar = false;
 
@@ -52,7 +55,13 @@ public class ModoPrueba : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(activePer1 == false && timer >= 1  ) // si no esta activado y paso 1 seg activa el boton y su imagen
+        if (reproducirmodoprueba)
+        {
+            AudioSource.PlayClipAtPoint(modoprueba, new Vector3(0, 0, 0), 1);
+            reproducirmodoprueba = false;
+        }
+
+        if (activePer1 == false && timer >= 1  ) // si no esta activado y paso 1 seg activa el boton y su imagen
         {
             activePer1 = true;
             GameObject.Find("Personaje1").GetComponent<Image>().enabled = true;
