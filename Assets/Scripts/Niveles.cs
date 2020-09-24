@@ -16,6 +16,7 @@ public class Niveles : MonoBehaviour
     bool reproducirmedio = true;
     public AudioClip audiodificil = null;
     bool reproducirdificil = true;
+    private AudioSource instrucciones;
 
 
     // Start is called before the first frame update
@@ -55,33 +56,35 @@ public class Niveles : MonoBehaviour
             SceneManager.LoadScene("Menu");
         }
 
-        if (timer >= 4 && clicks == 1)
+        if (timer >= 10 && clicks == 1 && reproducirfacil)
         {
-            if (reproducirfacil)
-            {
-                AudioSource.PlayClipAtPoint(audiofacil, new Vector3(0, 0, 0), 1);
-                reproducirfacil = false;
-            }
+            reproducirfacil = false;
+            AudioSource.PlayClipAtPoint(audiofacil, new Vector3(0, 0, 0), 1);
+        }
+        if (timer >= 12 && clicks == 1 && !reproducirfacil)
+        {
             SceneManager.LoadScene("SampleScene");
         }
 
-        if (timer >= 4 && clicks == 2)
+        if(timer >= 10 && clicks == 2 && reproducirmedio )
         {
-            if (reproducirmedio)
-            {
-                AudioSource.PlayClipAtPoint(audiomedio, new Vector3(0, 0, 0), 1);
-                reproducirmedio = false;
-            }
+            reproducirmedio = false;
+            AudioSource.PlayClipAtPoint(audiomedio, new Vector3(0, 0, 0), 1);
+        }
+
+        if (timer >= 12 && clicks == 2 && !reproducirmedio)
+        {
             SceneManager.LoadScene("lvl2");
         }
 
-        if (timer >= 4 && clicks == 3)
+        if (timer >= 10 && clicks == 3 && reproducirdificil )
         {
-            if (reproducirdificil)
-            {
-                AudioSource.PlayClipAtPoint(audiodificil, new Vector3(0, 0, 0), 1);
-                reproducirdificil = false;
-            }
+            reproducirdificil = false;
+            AudioSource.PlayClipAtPoint(audiodificil, new Vector3(0, 0, 0), 1);
+        }
+
+        if (timer >= 12 && clicks == 3 &&  !reproducirdificil)
+        {
             SceneManager.LoadScene("lvl3");
         }
 
