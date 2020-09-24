@@ -37,6 +37,8 @@ public class lvl1 : MonoBehaviour
     public AudioClip escucha = null;
     public AudioClip tuturno = null;
 
+   
+
 
     void Start()
     {
@@ -47,7 +49,10 @@ public class lvl1 : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(activePer1 == false && timer >= 1  ) // si no esta activado y paso 1 seg activa el boton y su imagen
+
+       
+
+        if (activePer1 == false && timer >= 1  ) // si no esta activado y paso 1 seg activa el boton y su imagen
         {
             activePer1 = true;
             GameObject.Find("Personaje1").GetComponent<Image>().enabled = true;
@@ -160,6 +165,10 @@ public class lvl1 : MonoBehaviour
                 agregarlist = true;
 
             }
+            //Anette
+            else {
+                SceneManager.LoadScene("Perdio");
+            }
 
 
         }
@@ -197,6 +206,11 @@ public class lvl1 : MonoBehaviour
                 agregarlist = true;
 
             }
+            //Anette
+            else
+            {
+                SceneManager.LoadScene("Perdio");
+            }
         }
 
             
@@ -231,6 +245,11 @@ public class lvl1 : MonoBehaviour
                 agregarlist = true;
 
             }
+            //Anette
+            else
+            {
+                SceneManager.LoadScene("Perdio");
+            }
         }
 
            
@@ -264,6 +283,11 @@ public class lvl1 : MonoBehaviour
                 jugador.Clear();
                 agregarlist = true;
 
+            }
+            //Anette
+            else
+            {
+                SceneManager.LoadScene("Perdio");
             }
         }
   

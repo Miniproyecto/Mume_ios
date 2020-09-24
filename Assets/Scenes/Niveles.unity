@@ -363,6 +363,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc8864824698f34cba2175617f4f222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioniveles: {fileID: 8300000, guid: 94aa21244014e4dcfa345e988f5ea8a2, type: 3}
+  audiofacil: {fileID: 8300000, guid: fe60f0363ac0243e4ac4323c50d6b6a0, type: 3}
+  audiomedio: {fileID: 8300000, guid: 42acc7871fc8a4bb7a0908f2df5a3b55, type: 3}
+  audiodificil: {fileID: 8300000, guid: 1e4d50f18276d4db5848161669c6c338, type: 3}
 --- !u!4 &416504908
 Transform:
   m_ObjectHideFlags: 0

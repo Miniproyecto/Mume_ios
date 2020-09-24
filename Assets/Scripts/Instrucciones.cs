@@ -28,7 +28,7 @@ public class Instrucciones : MonoBehaviour
             reproducir = false;
         }
 
-        if (timer >= 17)
+        if (timer >= 26)
         {
             reproducir = true;
             timer = 0;

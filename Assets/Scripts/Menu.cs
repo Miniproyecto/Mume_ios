@@ -95,7 +95,7 @@ public class Menu : MonoBehaviour
 
     public void clickPrueba()
     {
-        SceneManager.LoadScene("Instrucciones");
+        SceneManager.LoadScene("ModoPrueba");
     }
 
     public void clickProposito()
